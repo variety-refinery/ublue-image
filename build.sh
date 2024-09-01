@@ -32,7 +32,10 @@ rpm-ostree install \
 	kleopatra \
 	krita \
 	merkuro \
+	mpd \
+	mpdris2 \
 	mpv \
+	ncmpcpp \
 	neovim \
 	nextcloud-client \
 	oxipng \
