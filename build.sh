@@ -14,8 +14,9 @@ RELEASE="$(rpm -E %fedora)"
 
 curl --location --output /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 curl --location --output /etc/yum.repos.d/starship.repo https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-40/atim-starship-fedora-40.repo
+curl --location --output /etc/yum.repos.d/micro-packages.repo https://copr.fedorainfracloud.org/coprs/niko-micro/micro-packages/repo/fedora-40/niko-micro-micro-packages-fedora-40.repo
 
-# TODO: package and add todoman, reader, string-reminder, bat-extras, (new) micro-systemd-units, htmlq, prettier, stopmpd, topgrade, create-todo-user
+# TODO: package and add todoman, reader, bat-extras, (new) micro-systemd-units, htmlq, prettier, stopmpd, topgrade, create-todo-user
 rpm-ostree install \
 	adw-gtk3-theme \
 	akregator \
@@ -51,6 +52,7 @@ rpm-ostree install \
 	skanpage \
 	speech-dispatcher \
 	starship \
+	string_reminder \
 	tailscale \
 	tealdeer \
 	trash-cli \
