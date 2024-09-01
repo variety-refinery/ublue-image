@@ -42,6 +42,10 @@ rpm-ostree install \
 	p7zip \
 	pnpm \
 	qalculate-gtk \
+	rpm-devel \
+	rpmbuild \
+	rpmdevtools \
+	rpmlint \
 	rustup \
 	skanpage \
 	speech-dispatcher \
