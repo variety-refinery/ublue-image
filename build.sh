@@ -43,7 +43,7 @@ rpm-ostree install \
 	pnpm \
 	qalculate-gtk \
 	rpm-devel \
-	rpmbuild \
+	rpm-build \
 	rpmdevtools \
 	rpmlint \
 	rustup \
