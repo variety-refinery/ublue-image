@@ -24,4 +24,4 @@ rpm-ostree install tailscale fish eza neovim
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-systemctl enable tailscale.service
+systemctl enable tailscaled.service
