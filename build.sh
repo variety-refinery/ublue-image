@@ -14,7 +14,7 @@ RELEASE="$(rpm -E %fedora)"
 
 curl --location --output /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 
-# TODO: package and add todoman, reader, string-reminder, bat-extras, (new) micro-systemd-units, htmlq, prettier, stopmpd, topgrade, create-todo-user
+# TODO: package and add todoman, reader, string-reminder, bat-extras, (new) micro-systemd-units, htmlq, prettier, stopmpd, topgrade, create-todo-user, starship
 rpm-ostree install \
 	adw-gtk3-theme \
 	akregator \
@@ -42,7 +42,6 @@ rpm-ostree install \
 	rustup \
 	skanpage \
 	speech-dispatcher \
-	starship \
 	tailscale \
 	tealdeer \
 	trash-cli \
