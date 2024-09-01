@@ -13,7 +13,7 @@ RELEASE="$(rpm -E %fedora)"
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 curl --location --output /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-rpm-ostree install tailscale
+rpm-ostree install tailscale fish eza neovim
 
 # this installs a package from fedora repos
 #rpm-ostree install screen
@@ -24,3 +24,4 @@ rpm-ostree install tailscale
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+systemctl enable tailscale.service
