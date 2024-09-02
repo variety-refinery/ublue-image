@@ -16,7 +16,7 @@ curl --location --output /etc/yum.repos.d/starship.repo https://copr.fedorainfra
 curl --location --output /etc/yum.repos.d/micro-packages.repo https://copr.fedorainfracloud.org/coprs/niko-micro/micro-packages/repo/fedora-40/niko-micro-micro-packages-fedora-40.repo
 curl --location --output /etc/yum.repos.d/bat-extra.repo https://copr.fedorainfracloud.org/coprs/awood/bat-extras/repo/fedora-40/awood-bat-extras-fedora-40.repo
 
-# TODO: package and add todoman, bat-extras, (new) micro-systemd-units, htmlq, prettier, create-todo-user, topgrade
+# TODO: package and add todoman, bat-extras, (new) micro-systemd-units, htmlq, prettier, create-todo-user, topgrade, (new) micro-manager
 rpm-ostree install \
 	adw-gtk3-theme \
 	akregator \
@@ -43,7 +43,6 @@ rpm-ostree install \
 	nmap-ncat \
 	oxipng \
 	p7zip \
-	personal-packages \
 	pnpm \
 	qalculate-gtk \
 	reader \
@@ -56,6 +55,7 @@ rpm-ostree install \
 	speech-dispatcher \
 	starship \
 	stopmpd \
+	string_reminder \
 	tailscale \
 	tealdeer \
 	trash-cli \
