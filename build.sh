@@ -11,17 +11,21 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" | tee -a /etc/yum.repos.d/vscodium.repo
+
 curl --location --output /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 curl --location --output /etc/yum.repos.d/starship.repo https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-40/atim-starship-fedora-40.repo
 curl --location --output /etc/yum.repos.d/micro-packages.repo https://copr.fedorainfracloud.org/coprs/niko-micro/micro-packages/repo/fedora-40/niko-micro-micro-packages-fedora-40.repo
 curl --location --output /etc/yum.repos.d/bat-extra.repo https://copr.fedorainfracloud.org/coprs/awood/bat-extras/repo/fedora-40/awood-bat-extras-fedora-40.repo
 
-# TODO: package and add todoman, bat-extras, (new) micro-systemd-units, htmlq, prettier, create-todo-user, topgrade, (new) micro-manager
+# TODO: package and add (new) micro-systemd-units, create-todo-user, (new) micro-manager
 rpm-ostree install \
 	adw-gtk3-theme \
 	akregator \
 	bat \
 	chafa \
+	codium \
 	cryfs \
 	easyeffects \
 	eza \
@@ -33,6 +37,7 @@ rpm-ostree install \
 	khal \
 	kleopatra \
 	krita \
+	meow \
 	merkuro \
 	mpd \
 	mpdris2 \
