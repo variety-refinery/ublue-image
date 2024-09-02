@@ -4,7 +4,6 @@ set -ouex pipefail
 
 RELEASE="$(rpm -E %fedora)"
 
-
 ### Install packages
 
 # Packages can be installed from any enabled yum repo on the image.
@@ -15,8 +14,9 @@ RELEASE="$(rpm -E %fedora)"
 curl --location --output /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 curl --location --output /etc/yum.repos.d/starship.repo https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-40/atim-starship-fedora-40.repo
 curl --location --output /etc/yum.repos.d/micro-packages.repo https://copr.fedorainfracloud.org/coprs/niko-micro/micro-packages/repo/fedora-40/niko-micro-micro-packages-fedora-40.repo
+curl --location --output /etc/yum.repos.d/bat-extra.repo https://copr.fedorainfracloud.org/coprs/awood/bat-extras/repo/fedora-40/awood-bat-extras-fedora-40.repo
 
-# TODO: package and add todoman, reader, bat-extras, (new) micro-systemd-units, htmlq, prettier, stopmpd, topgrade, create-todo-user
+# TODO: package and add todoman, bat-extras, (new) micro-systemd-units, htmlq, prettier, create-todo-user, topgrade
 rpm-ostree install \
 	adw-gtk3-theme \
 	akregator \
@@ -40,10 +40,13 @@ rpm-ostree install \
 	ncmpcpp \
 	neovim \
 	nextcloud-client \
+	nmap-ncat \
 	oxipng \
 	p7zip \
+	personal-packages \
 	pnpm \
 	qalculate-gtk \
+	reader \
 	rpm-build \
 	rpm-devel \
 	rpmdevtools \
@@ -52,7 +55,7 @@ rpm-ostree install \
 	skanpage \
 	speech-dispatcher \
 	starship \
-	string_reminder \
+	stopmpd \
 	tailscale \
 	tealdeer \
 	trash-cli \
