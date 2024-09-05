@@ -26,11 +26,6 @@ rpm-ostree install \
 	akregator \
 	bat \
 	chafa \
-	clevis \
-	clevis-dracut \
-	clevis-luks \
-	clevis-systemd\
-	clevis-udisks2 \
 	codium \
 	cryfs \
 	easyeffects \
