@@ -21,6 +21,7 @@ curl --location --output /etc/yum.repos.d/bat-extra.repo https://copr.fedorainfr
 
 # TODO: package and add (new) micro-systemd-units, create-todo-user, (new) micro-manager
 rpm-ostree install \
+	/tmp/npkg-0.1.0-1.x86_64.rpm \
 	adw-gtk3-theme \
 	akregator \
 	bat \
