@@ -25,6 +25,7 @@ rpm-ostree install \
 	akregator \
 	bat \
 	chafa \
+	clevis \
 	codium \
 	cryfs \
 	easyeffects \
