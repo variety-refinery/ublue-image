@@ -25,6 +25,7 @@ rpm-ostree install \
 	adw-gtk3-theme \
 	akregator \
 	bat \
+	borgbackup \
 	chafa \
 	codium \
 	cryfs \
