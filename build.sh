@@ -26,6 +26,10 @@ rpm-ostree install \
 	bat \
 	chafa \
 	clevis \
+	clevis-dracut \
+	clevis-luks \
+	clevis-systemd\
+	clevis-udisks2 \
 	codium \
 	cryfs \
 	easyeffects \
