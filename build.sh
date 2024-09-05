@@ -50,6 +50,7 @@ rpm-ostree install \
 	p7zip \
 	pnpm \
 	qalculate-gtk \
+	qt-qdbusviewer \
 	reader \
 	rpm-build \
 	rpm-devel \
