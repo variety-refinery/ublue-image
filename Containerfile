@@ -49,7 +49,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
-COPY npkg-0.1.0-1.x86_64.rpm /tmp/npkg-0.2.0-1.x86_64.rpm
+COPY npkg-0.2.0-1.x86_64.rpm /tmp/npkg-0.2.0-1.x86_64.rpm
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
