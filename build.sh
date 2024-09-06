@@ -19,9 +19,8 @@ curl --location --output /etc/yum.repos.d/starship.repo https://copr.fedorainfra
 curl --location --output /etc/yum.repos.d/micro-packages.repo https://copr.fedorainfracloud.org/coprs/niko-micro/micro-packages/repo/fedora-40/niko-micro-micro-packages-fedora-40.repo
 curl --location --output /etc/yum.repos.d/bat-extra.repo https://copr.fedorainfracloud.org/coprs/awood/bat-extras/repo/fedora-40/awood-bat-extras-fedora-40.repo
 
-# TODO: package and add (new) micro-systemd-units, create-todo-user, (new) micro-manager
 rpm-ostree install \
-	/tmp/npkg-0.1.0-1.x86_64.rpm \
+	/tmp/npkg-0.2.0-1.x86_64.rpm \
 	adw-gtk3-theme \
 	akregator \
 	bat \
