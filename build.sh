@@ -35,6 +35,7 @@ rpm-ostree install \
 	graphviz \
 	hyfetch \
 	inxi \
+	kcolorchooser \
 	khal \
 	kleopatra \
 	krita \
@@ -51,7 +52,7 @@ rpm-ostree install \
 	p7zip \
 	pnpm \
 	qalculate-gtk \
-	qt-qdbusviewer \
+	qt6-qdbusviewer \
 	reader \
 	rpm-build \
 	rpm-devel \
