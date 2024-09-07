@@ -60,6 +60,7 @@ rpm-ostree install \
 	rustup \
 	skanpage \
 	speech-dispatcher \
+	sqlitebrowser \
 	starship \
 	stopmpd \
 	string_reminder \
@@ -67,6 +68,7 @@ rpm-ostree install \
 	tealdeer \
 	trash-cli \
 	vdirsyncer \
+	wine \
 	yq \
 	yt-dlp
 
