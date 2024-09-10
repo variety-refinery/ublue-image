@@ -69,7 +69,6 @@ rpm-ostree install \
 	tealdeer \
 	trash-cli \
 	vdirsyncer \
-	wine \
 	yq \
 	yt-dlp
 
