@@ -20,7 +20,7 @@ curl --location --output /etc/yum.repos.d/micro-packages.repo https://copr.fedor
 curl --location --output /etc/yum.repos.d/bat-extra.repo https://copr.fedorainfracloud.org/coprs/awood/bat-extras/repo/fedora-40/awood-bat-extras-fedora-40.repo
 
 rpm-ostree install \
-	/tmp/npkg-0.5.0-1.x86_64.rpm \
+	/tmp/npkg-0.6.0-1.x86_64.rpm \
 	adw-gtk3-theme \
 	akregator \
 	bat \
