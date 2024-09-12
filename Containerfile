@@ -50,6 +50,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 COPY build.sh /tmp/build.sh
 COPY npkg-0.7.0-1.x86_64.rpm /tmp/npkg-0.7.0-1.x86_64.rpm
+COPY typewriter-1.2.0+fedora-1.x86_64.rpm /tmp/typewriter-1.2.0+fedora-1.x86_64.rpm
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \

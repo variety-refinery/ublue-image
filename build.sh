@@ -21,6 +21,7 @@ curl --location --output /etc/yum.repos.d/bat-extra.repo https://copr.fedorainfr
 
 rpm-ostree install \
 	/tmp/npkg-0.7.0-1.x86_64.rpm \
+	/tmp/typewriter-1.2.0+fedora-1.x86_64.rpm \
 	adw-gtk3-theme \
 	akregator \
 	bat \
