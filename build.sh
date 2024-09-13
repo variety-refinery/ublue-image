@@ -30,6 +30,7 @@ rpm-ostree install \
 	codium \
 	cryfs \
 	easyeffects \
+	emacs \
 	eza \
 	fastfetch \
 	fish \
