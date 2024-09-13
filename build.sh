@@ -42,6 +42,7 @@ rpm-ostree install \
 	krita \
 	meow \
 	merkuro \
+	mesa-demos \
 	mpd \
 	mpdris2 \
 	mpv \
