@@ -77,7 +77,7 @@ rpm-ostree install \
 	trash-cli \
 	vdirsyncer \
 	yq \
-  fd-find \
+	fd-find \
 	yt-dlp
 
 # this installs a package from fedora repos
@@ -90,3 +90,4 @@ rpm-ostree install \
 
 systemctl enable podman.socket
 systemctl enable tailscaled.service
+systemctl enable opensnitch.service
