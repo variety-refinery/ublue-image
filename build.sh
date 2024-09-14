@@ -30,7 +30,6 @@ rpm-ostree install \
 	codium \
 	cryfs \
 	easyeffects \
-	emacs \
 	eza \
 	fastfetch \
 	fish \
@@ -73,6 +72,7 @@ rpm-ostree install \
 	trash-cli \
 	vdirsyncer \
 	yq \
+  fd-find \
 	yt-dlp
 
 # this installs a package from fedora repos
