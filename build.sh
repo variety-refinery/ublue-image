@@ -35,8 +35,10 @@ rpm-ostree install \
 	codium \
 	cryfs \
 	easyeffects \
+	epson-inkjet-printer-escpr \
 	eza \
 	fastfetch \
+	fd-find \
 	fish \
 	graphviz \
 	hyfetch \
@@ -77,7 +79,6 @@ rpm-ostree install \
 	trash-cli \
 	vdirsyncer \
 	yq \
-	fd-find \
 	yt-dlp
 
 # this installs a package from fedora repos
