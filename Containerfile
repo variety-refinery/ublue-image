@@ -49,8 +49,9 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
-COPY npkg-0.10.1-1.x86_64.rpm /tmp/npkg.rpm 
+COPY npkg-0.10.1-1.x86_64.rpm /tmp/npkg.rpm
 COPY typewriter-1.2.0+fedora-1.x86_64.rpm /tmp/typewriter.rpm
+COPY krender-1.1.0+fedora-1.x86_64.rpm /tmp/krender.rpm
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \

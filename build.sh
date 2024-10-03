@@ -23,6 +23,7 @@ curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opens
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-ui-1.6.6-1.noarch.rpm
 
 rpm-ostree install \
+	/tmp/krender.rpm \
 	/tmp/npkg.rpm \
 	/tmp/opensnitch-ui.rpm \
 	/tmp/opensnitch.rpm \
