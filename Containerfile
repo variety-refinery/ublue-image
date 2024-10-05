@@ -51,7 +51,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 COPY build.sh /tmp/build.sh
 COPY npkg-0.10.1-1.x86_64.rpm /tmp/npkg.rpm
 COPY typewriter-1.2.0+fedora-1.x86_64.rpm /tmp/typewriter.rpm
-COPY krender-1.3.0+fedora-1.x86_64.rpm /tmp/krender.rpm
+COPY krender-1.4.0+fedora-1.x86_64.rpm /tmp/krender.rpm
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
