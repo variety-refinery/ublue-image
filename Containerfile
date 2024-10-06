@@ -53,9 +53,9 @@ COPY npkg-0.10.1-1.x86_64.rpm /tmp/npkg.rpm
 COPY typewriter-1.2.0+fedora-1.x86_64.rpm /tmp/typewriter.rpm
 COPY krender-1.4.0+fedora-1.x86_64.rpm /tmp/krender.rpm
 
-RUN mkdir -p /var/lib/alternatives && \
-    /tmp/build.sh && \
-    ostree container commit
+RUN mkdir -p /var/lib/alternatives && ostree container commit
+RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && ostree container commit
+RUN /tmp/build.sh && ostree container commit
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
