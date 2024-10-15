@@ -34,6 +34,7 @@ rpm-ostree install \
 	borgbackup \
 	chafa \
 	codium \
+	comrak \
 	cryfs \
 	easyeffects \
 	epson-inkjet-printer-escpr \
