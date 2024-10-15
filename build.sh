@@ -49,6 +49,7 @@ rpm-ostree install \
 	khal \
 	kleopatra \
 	krita \
+	libavif-tools \
 	meow \
 	merkuro \
 	mesa-demos \
