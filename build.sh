@@ -33,6 +33,8 @@ rpm-ostree install \
 	bat \
 	borgbackup \
 	chafa \
+	clang \
+	cmake \
 	codium \
 	comrak \
 	cryfs \
@@ -43,6 +45,7 @@ rpm-ostree install \
 	fd-find \
 	fish \
 	graphviz \
+	gtk3-devel \
 	hyfetch \
 	inxi \
 	kcolorchooser \
@@ -59,6 +62,7 @@ rpm-ostree install \
 	ncmpcpp \
 	neovim \
 	nextcloud-client \
+	ninja-build \
 	nmap-ncat \
 	oxipng \
 	p7zip \
