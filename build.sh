@@ -84,6 +84,7 @@ rpm-ostree install \
 	tailscale \
 	tealdeer \
 	trash-cli \
+	v4l2loopback \
 	vdirsyncer \
 	yq \
 	yt-dlp
