@@ -41,8 +41,8 @@ ARG SOURCE_TAG="latest"
 
 ### 2. SOURCE IMAGE
 ## this is a standard Containerfile FROM using the build ARGs above to select the right upstream image
-FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 FROM ghcr.io/ublue-os/akmods:main-40 AS akmods
+FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 ### 3. MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
@@ -55,7 +55,9 @@ COPY build.sh /tmp/build.sh
 COPY npkg-0.10.1-1.x86_64.rpm /tmp/npkg.rpm
 COPY typewriter-1.2.0+fedora-1.x86_64.rpm /tmp/typewriter.rpm
 COPY krender-1.4.0+fedora-1.x86_64.rpm /tmp/krender.rpm
-RUN --mount=type=bind,from=akmods,src=/rpms,dst=/tmp/akmods-rpms /tmp/build.sh && ostree container commit
+RUN --mount=type=cache,dst=/var/cache/rpm-ostree \
+    --mount=type=bind,from=akmods,src=/rpms,dst=/tmp/akmods-rpms \
+    /tmp/build.sh && ostree container commit
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
