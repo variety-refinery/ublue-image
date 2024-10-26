@@ -42,7 +42,7 @@ ARG SOURCE_TAG="latest"
 ### 2. SOURCE IMAGE
 ## this is a standard Containerfile FROM using the build ARGs above to select the right upstream image
 FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
-
+FROM ghcr.io/ublue-os/akmods:main-40 AS akmods
 
 ### 3. MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
@@ -51,14 +51,11 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 RUN mkdir -p /var/lib/alternatives && ostree container commit
 RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && ostree container commit
 
-COPY --from=ghcr.io/ublue-os/akmods:main-40 /rpms/ /tmp/rpms
-RUN rpm-ostree install /tmp/rpms/ublue-os/ublue-os-akmods*.rpm /tmp/rpms/kmods/kmod-v4l2loopback*.rpm && ostree container commit
-
 COPY build.sh /tmp/build.sh
 COPY npkg-0.10.1-1.x86_64.rpm /tmp/npkg.rpm
 COPY typewriter-1.2.0+fedora-1.x86_64.rpm /tmp/typewriter.rpm
 COPY krender-1.4.0+fedora-1.x86_64.rpm /tmp/krender.rpm
-RUN /tmp/build.sh && ostree container commit
+RUN --mount=type=bind,from=akmods,src=/rpms,dst=/tmp/akmods-rpms /tmp/build.sh && ostree container commit
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
