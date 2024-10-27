@@ -58,7 +58,7 @@ COPY krender-1.4.0+fedora-1.x86_64.rpm /tmp/krender.rpm
 RUN --mount=type=cache,dst=/var/cache/rpm-ostree \
     --mount=type=bind,from=akmods,src=/rpms,dst=/tmp/akmods-rpms \
     /tmp/build.sh && ostree container commit
-RUN depmod -a && ostree containaer commit
+
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit

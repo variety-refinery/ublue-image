@@ -90,6 +90,10 @@ rpm-ostree install \
 	yq \
 	yt-dlp
 
+cat << EOF > /etc/modprobe.d/v4l2loopback.conf
+options v4l2loopback video_nr=8 exclusive_caps=1
+EOF
+
 # this installs a package from fedora repos
 #rpm-ostree install screen
 
