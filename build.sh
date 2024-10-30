@@ -21,6 +21,8 @@ curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/op
 
 rpm-ostree install \
 	/tmp/akmods-rpms/kmods/*v4l2loopback*.rpm \
+	/tmp/opensnith-ui.rpm \
+	/tmp/opensnith.rpm \
 	/tmp/packages/*.rpm \
 	adw-gtk3-theme \
 	akregator \
