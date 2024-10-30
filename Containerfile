@@ -52,9 +52,7 @@ RUN mkdir -p /var/lib/alternatives && ostree container commit
 RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && ostree container commit
 
 COPY build.sh /tmp/build.sh
-COPY npkg-0.10.1-1.x86_64.rpm /tmp/npkg.rpm
-COPY typewriter-1.2.0+fedora-1.x86_64.rpm /tmp/typewriter.rpm
-COPY krender-1.4.0+fedora-1.x86_64.rpm /tmp/krender.rpm
+ADD packages /tmp/packages
 RUN --mount=type=cache,dst=/var/cache/rpm-ostree \
     --mount=type=bind,from=akmods,src=/rpms,dst=/tmp/akmods-rpms \
     /tmp/build.sh && ostree container commit

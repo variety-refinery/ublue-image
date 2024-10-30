@@ -15,20 +15,13 @@ rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/mast
 printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" | tee -a /etc/yum.repos.d/vscodium.repo
 
 curl --location --output /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-curl --location --output /etc/yum.repos.d/starship.repo https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-40/atim-starship-fedora-40.repo
-curl --location --output /etc/yum.repos.d/micro-packages.repo https://copr.fedorainfracloud.org/coprs/niko-micro/micro-packages/repo/fedora-40/niko-micro-micro-packages-fedora-40.repo
-curl --location --output /etc/yum.repos.d/bat-extra.repo https://copr.fedorainfracloud.org/coprs/awood/bat-extras/repo/fedora-40/awood-bat-extras-fedora-40.repo
 curl --location --output /etc/yum.repos.d/scrcpy.repo https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-40/zeno-scrcpy-fedora-40.repo
 curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-1.6.6-1.x86_64.rpm
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-ui-1.6.6-1.noarch.rpm
 
 rpm-ostree install \
 	/tmp/akmods-rpms/kmods/*v4l2loopback*.rpm \
-	/tmp/krender.rpm \
-	/tmp/npkg.rpm \
-	/tmp/opensnitch-ui.rpm \
-	/tmp/opensnitch.rpm \
-	/tmp/typewriter.rpm \
+	/tmp/packages/*.rpm \
 	adw-gtk3-theme \
 	akregator \
 	bat \
@@ -80,11 +73,11 @@ rpm-ostree install \
 	skanpage \
 	speech-dispatcher \
 	sqlitebrowser \
-	starship \
 	stopmpd \
 	string_reminder \
 	tailscale \
 	tealdeer \
+	tmux \
 	trash-cli \
 	vdirsyncer \
 	yq \
