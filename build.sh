@@ -49,7 +49,6 @@ rpm-ostree install \
 	kleopatra \
 	krita \
 	libavif-tools \
-	meow \
 	merkuro \
 	mesa-demos \
 	mpd \
@@ -65,7 +64,6 @@ rpm-ostree install \
 	pnpm \
 	qalculate-gtk \
 	qt6-qdbusviewer \
-	reader \
 	rpm-build \
 	rpm-devel \
 	rpmdevtools \
@@ -75,8 +73,6 @@ rpm-ostree install \
 	skanpage \
 	speech-dispatcher \
 	sqlitebrowser \
-	stopmpd \
-	string_reminder \
 	tailscale \
 	tealdeer \
 	tmux \
