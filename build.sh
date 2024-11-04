@@ -49,6 +49,9 @@ rpm-ostree install \
 	kleopatra \
 	krita \
 	libavif-tools \
+	libcurl-devel \
+	libgit2-devel \
+	libssh2-devel \
 	merkuro \
 	mesa-demos \
 	mpd \
@@ -59,8 +62,10 @@ rpm-ostree install \
 	nextcloud-client \
 	ninja-build \
 	nmap-ncat \
+	openssl-devel \
 	oxipng \
 	p7zip \
+	pkgconf \
 	pnpm \
 	qalculate-gtk \
 	qt6-qdbusviewer \
