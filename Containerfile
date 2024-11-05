@@ -41,7 +41,7 @@ ARG SOURCE_TAG="41"
 
 ### 2. SOURCE IMAGE
 ## this is a standard Containerfile FROM using the build ARGs above to select the right upstream image
-FROM ghcr.io/ublue-os/akmods:main-41 AS akmods
+FROM ghcr.io/ublue-os/akmods:main-${SOURCE_TAG} AS akmods
 FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 ### 3. MODIFICATIONS
