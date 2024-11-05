@@ -70,6 +70,7 @@ rpm-ostree install \
 	p7zip \
 	pkgconf \
 	pnpm \
+	powertop \
 	qalculate-gtk \
 	qt6-qdbusviewer \
 	rpm-build \
