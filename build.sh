@@ -20,7 +20,7 @@ curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opens
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-ui-1.6.6-1.noarch.rpm
 
 rpm-ostree override remove \
-	tuned tuend-ppd
+	tuned tuned-ppd
 
 rpm-ostree install \
 	/tmp/akmods-rpms/kmods/*v4l2loopback*.rpm \
