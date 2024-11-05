@@ -19,6 +19,9 @@ curl --location --output /etc/yum.repos.d/scrcpy.repo https://copr.fedorainfracl
 curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-1.6.6-1.x86_64.rpm
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-ui-1.6.6-1.noarch.rpm
 
+rpm-ostree override remove \
+	tuned tuend-ppd
+
 rpm-ostree install \
 	/tmp/akmods-rpms/kmods/*v4l2loopback*.rpm \
 	/tmp/opensnitch-ui.rpm \
@@ -80,6 +83,8 @@ rpm-ostree install \
 	sqlitebrowser \
 	tailscale \
 	tealdeer \
+	tlp \
+	tlp-rdw \
 	tmux \
 	trash-cli \
 	vdirsyncer \
@@ -101,3 +106,6 @@ EOF
 systemctl enable podman.socket
 systemctl enable tailscaled.service
 systemctl enable opensnitch.service
+systemctl enable tlp.service
+
+systemctl mask systemd-rfkill.service systemd-rfkill.socket
