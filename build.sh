@@ -64,6 +64,7 @@ rpm-ostree install \
 	neovim \
 	nextcloud-client \
 	ninja-build \
+	nmap \
 	nmap-ncat \
 	openssl-devel \
 	oxipng \
