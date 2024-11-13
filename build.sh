@@ -97,6 +97,10 @@ cat << EOF > /etc/modprobe.d/v4l2loopback.conf
 options v4l2loopback video_nr=8 exclusive_caps=1
 EOF
 
+cat << EOF > /etc/tlp.d/00-autosuspend.conf
+USB_DENYLIST="04e8:6860"
+EOF
+
 # this installs a package from fedora repos
 #rpm-ostree install screen
 
