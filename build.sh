@@ -101,6 +101,10 @@ cat << EOF > /etc/tlp.d/00-autosuspend.conf
 USB_DENYLIST="04e8:6860"
 EOF
 
+cat << EOF > /etc/sysctl.d/99-sysrq.conf
+kernel.sysrq = 244
+EOF
+
 # this installs a package from fedora repos
 #rpm-ostree install screen
 
