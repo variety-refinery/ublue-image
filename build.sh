@@ -53,6 +53,8 @@ rpm-ostree install \
 	gstreamer1-plugins-good \
 	gstreamer1-plugins-good-extras \
 	gstreamer1-plugins-ugly \
+	gstreamer1-vaapi \
+	gstreamer1-vaapi-devel \
 	gtk3-devel \
 	hyfetch \
 	inxi \
