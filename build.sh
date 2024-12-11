@@ -78,6 +78,7 @@ rpm-ostree install \
 	openssl-devel \
 	oxipng \
 	p7zip \
+	php \
 	pkgconf \
 	pnpm \
 	powertop \
