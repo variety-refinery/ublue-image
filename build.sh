@@ -79,8 +79,10 @@ rpm-ostree install \
 	oxipng \
 	p7zip \
 	php \
+	php-pgsql \
 	pkgconf \
 	pnpm \
+	postgresql \
 	powertop \
 	qalculate \
 	qalculate-gtk \
