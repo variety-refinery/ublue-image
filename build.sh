@@ -83,6 +83,7 @@ rpm-ostree install \
 	pkgconf \
 	pnpm \
 	postgresql \
+	postgresql-server \
 	powertop \
 	qalculate \
 	qalculate-gtk \
