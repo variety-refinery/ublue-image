@@ -43,6 +43,7 @@ rpm-ostree install \
 	fastfetch \
 	fd-find \
 	fish \
+	flatpak-builder \
 	graphviz \
 	gstreamer1-devel \
 	gstreamer1-plugins-bad-free \
