@@ -18,6 +18,7 @@ curl --location --output /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.
 curl --location --output /etc/yum.repos.d/scrcpy.repo https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-40/zeno-scrcpy-fedora-40.repo
 curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-1.6.6-1.x86_64.rpm
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-ui-1.6.6-1.noarch.rpm
+curl --location --output /tmp/sunshine.rpm https://github.com/LizardByte/Sunshine/releases/download/v0.23.1/sunshine-fedora-39-amd64.rpm
 
 rpm-ostree override remove \
 	tuned tuned-ppd
@@ -27,6 +28,7 @@ rpm-ostree install \
 	/tmp/opensnitch-ui.rpm \
 	/tmp/opensnitch.rpm \
 	/tmp/packages/*.rpm \
+	/tmp/sunshine.rpm \
 	adw-gtk3-theme \
 	akregator \
 	bat \
