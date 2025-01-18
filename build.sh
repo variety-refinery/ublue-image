@@ -16,7 +16,6 @@ printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbase
 
 curl --location --output /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 curl --location --output /etc/yum.repos.d/scrcpy.repo https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-41/zeno-scrcpy-fedora-41.repo
-curl --location --output /etc/yum.repos.d/sunshine.repo https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-41/lizardbyte-stable-fedora-41.repo
 curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-1.6.6-1.x86_64.rpm
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-ui-1.6.6-1.noarch.rpm
 
@@ -37,7 +36,6 @@ rpm-ostree install \
 	cmake \
 	codium \
 	comrak \
-	copr-ci \
 	cryfs \
 	easyeffects \
 	epson-inkjet-printer-escpr \
