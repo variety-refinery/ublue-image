@@ -57,7 +57,6 @@ rpm-ostree install \
 	gtk3-devel \
 	hyfetch \
 	inxi \
-	java-1.8.0-openjdk \
 	kcolorchooser \
 	khal \
 	kleopatra \
