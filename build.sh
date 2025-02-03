@@ -89,6 +89,7 @@ rpm-ostree install \
 	qalculate \
 	qalculate-gtk \
 	qt6-qdbusviewer \
+	rclone \
 	rpm-build \
 	rpm-devel \
 	rpmdevtools \
