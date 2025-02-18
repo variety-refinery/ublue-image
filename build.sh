@@ -107,6 +107,7 @@ rpm-ostree install \
 	tmux \
 	trash-cli \
 	vdirsyncer \
+	xdotool \
 	yq \
 	yt-dlp
 
