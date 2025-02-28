@@ -30,6 +30,7 @@ rpm-ostree install \
 	adw-gtk3-theme \
 	akregator \
 	alsa-lib-devel \
+	argon2 \
 	bat \
 	borgbackup \
 	chafa \
