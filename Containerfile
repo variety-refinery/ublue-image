@@ -41,7 +41,7 @@ ARG SOURCE_TAG="41"
 
 ### 2. SOURCE IMAGE
 ## this is a standard Containerfile FROM using the build ARGs above to select the right upstream image
-FROM ghcr.io/ublue-os/akmods:main-${SOURCE_TAG} AS akmods
+#FROM ghcr.io/ublue-os/akmods:main-${SOURCE_TAG} AS akmods
 FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 ### 3. MODIFICATIONS
@@ -53,9 +53,9 @@ RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-
 
 COPY build.sh /tmp/build.sh
 ADD packages /tmp/packages
-RUN --mount=type=cache,dst=/var/cache/rpm-ostree \
-    --mount=type=bind,from=akmods,src=/rpms,dst=/tmp/akmods-rpms \
-    /tmp/build.sh && ostree container commit
+#RUN --mount=type=cache,dst=/var/cache/rpm-ostree \
+#    --mount=type=bind,from=akmods,src=/rpms,dst=/tmp/akmods-rpms \
+#    /tmp/build.sh && ostree container commit
 
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs

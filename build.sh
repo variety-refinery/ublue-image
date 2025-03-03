@@ -23,7 +23,7 @@ rpm-ostree override remove \
 	tuned tuned-ppd
 
 rpm-ostree install \
-	/tmp/akmods-rpms/kmods/*v4l2loopback*.rpm \
+#	/tmp/akmods-rpms/kmods/*v4l2loopback*.rpm \
 	/tmp/opensnitch-ui.rpm \
 	/tmp/opensnitch.rpm \
 	/tmp/packages/*.rpm \
