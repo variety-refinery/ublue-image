@@ -2,8 +2,6 @@
 
 set -ouex pipefail
 
-RELEASE="$(rpm -E %fedora)"
-
 ### Install packages
 
 # Packages can be installed from any enabled yum repo on the image.
@@ -19,11 +17,9 @@ curl --location --output /etc/yum.repos.d/scrcpy.repo https://copr.fedorainfracl
 curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-1.6.6-1.x86_64.rpm
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-ui-1.6.6-1.noarch.rpm
 
-rpm-ostree override remove \
-	tuned tuned-ppd
+dnf5 remove --assumeyes tuned tuned-ppd
 
-rpm-ostree install \
-#	/tmp/akmods-rpms/kmods/*v4l2loopback*.rpm \
+dnf5 install --assumeyes \
 	/tmp/opensnitch-ui.rpm \
 	/tmp/opensnitch.rpm \
 	/tmp/packages/*.rpm \
@@ -124,11 +120,12 @@ cat << EOF > /etc/sysctl.d/99-sysrq.conf
 kernel.sysrq = 244
 EOF
 
-# this installs a package from fedora repos
-#rpm-ostree install screen
-
-# this would install a package from rpmfusion
-# rpm-ostree install vlc
+# Use a COPR Example:
+#
+# dnf5 -y copr enable ublue-os/staging
+# dnf5 -y install package
+# Disable COPRs so they don't end up enabled on the final image:
+# dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
 
@@ -138,3 +135,4 @@ systemctl enable opensnitch.service
 systemctl enable tlp.service
 
 systemctl mask systemd-rfkill.service systemd-rfkill.socket
+
