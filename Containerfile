@@ -17,6 +17,12 @@ COPY build.sh /tmp/build.sh
 ADD packages /tmp/packages
 
 RUN mkdir -p /var/lib/alternatives && \
+    dnf5 install \
+        https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+        https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && \
+    ostree container commit
+
+RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
 
