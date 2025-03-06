@@ -17,9 +17,9 @@ curl --location --output /etc/yum.repos.d/scrcpy.repo https://copr.fedorainfracl
 curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-1.6.6-1.x86_64.rpm
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-ui-1.6.6-1.noarch.rpm
 
-dnf5 remove --asumeyes tuned tuned-ppd
+dnf5 remove --assumeyes tuned tuned-ppd
 
-dnf5 install --asumeyes \
+dnf5 install --assumeyes \
 	/tmp/opensnitch-ui.rpm \
 	/tmp/opensnitch.rpm \
 	/tmp/packages/*.rpm \
