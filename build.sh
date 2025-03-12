@@ -82,6 +82,7 @@ dnf5 install --assumeyes \
 	pkgconf \
 	pnpm \
 	postgresql \
+	postgresql-contrib \
 	postgresql-server \
 	powertop \
 	qalculate \
