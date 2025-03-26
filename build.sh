@@ -31,6 +31,7 @@ dnf5 install --assumeyes \
 	cmake \
 	comrak \
 	cryfs \
+	dotnet-runtime-9.0 \
 	easyeffects \
 	epson-inkjet-printer-escpr \
 	eza \
