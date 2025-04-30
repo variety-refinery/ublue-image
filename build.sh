@@ -13,10 +13,12 @@ curl --location --output /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.
 curl --location --output /etc/yum.repos.d/scrcpy.repo https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-41/zeno-scrcpy-fedora-41.repo
 curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-1.6.6-1.x86_64.rpm
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-ui-1.6.6-1.noarch.rpm
+curl --location --output /tmp/ntfy.rpm https://github.com/binwiederhier/ntfy/releases/download/v2.11.0/ntfy_2.11.0_linux_amd64.rpm
 
 dnf5 remove --assumeyes tuned tuned-ppd
 
 dnf5 install --assumeyes \
+	/tmp/ntfy.rpm \
 	/tmp/opensnitch-ui.rpm \
 	/tmp/opensnitch.rpm \
 	/tmp/packages/*.rpm \
@@ -67,7 +69,6 @@ dnf5 install --assumeyes \
 	mpv \
 	ncmpcpp \
 	neovim \
-	nextcloud-client \
 	ninja-build \
 	nmap \
 	nmap-ncat \
