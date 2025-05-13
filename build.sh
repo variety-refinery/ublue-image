@@ -61,7 +61,6 @@ dnf5 install --assumeyes \
 	libcurl-devel \
 	libgit2-devel \
 	libssh2-devel \
-	merkuro \
 	mesa-demos \
 	mpd \
 	mpdris2 \
