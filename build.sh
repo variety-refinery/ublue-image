@@ -100,7 +100,6 @@ dnf5 install --assumeyes \
 	tlp \
 	tlp-rdw \
 	tmux \
-	waydroid \
 	trash-cli \
 	vdirsyncer \
 	xdotool \
