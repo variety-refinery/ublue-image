@@ -35,8 +35,6 @@ dnf5 install --assumeyes \
 	dotnet-runtime-9.0 \
 	dotnet-sdk-9.0 \
 	easyeffects \
-#	epson-inkjet-printer-escpr \
-#	eza \
 	fastfetch \
 	fd-find \
 	fish \
