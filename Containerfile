@@ -1,5 +1,5 @@
 #FROM ghcr.io/ublue-os/kinoite-main:latest
-FROM ghcr.io/ublue-os/kinoite-main:41
+FROM ghcr.io/ublue-os/kinoite-main:42
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:stable

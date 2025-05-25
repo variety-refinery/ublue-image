@@ -25,6 +25,7 @@ dnf5 install --assumeyes \
 	alsa-lib-devel \
 	argon2 \
 	bat \
+	bees \
 	borgbackup \
 	chafa \
 	clang \
@@ -34,8 +35,8 @@ dnf5 install --assumeyes \
 	dotnet-runtime-9.0 \
 	dotnet-sdk-9.0 \
 	easyeffects \
-	epson-inkjet-printer-escpr \
-	eza \
+#	epson-inkjet-printer-escpr \
+#	eza \
 	fastfetch \
 	fd-find \
 	fish \
