@@ -103,7 +103,7 @@ dnf5 install --assumeyes \
 	vdirsyncer \
 	xdotool \
 	ydotool \
-	yq 
+	yq \
 	yt-dlp
 
 cat << EOF > /etc/modprobe.d/v4l2loopback.conf
