@@ -55,6 +55,7 @@ dnf5 install --assumeyes \
 	kcolorchooser \
 	khal \
 	kleopatra \
+	kmod-v4l2loopback \
 	krita \
 	libavif-tools \
 	libcurl-devel \
