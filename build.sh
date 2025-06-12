@@ -137,7 +137,7 @@ UUID=1fa8bc05-0ffc-425b-b4d9-a8f15b3d492d
 # BEESSTATUS="\$WORK_DIR/\$UUID.status"
 
 ## Options to apply, see `beesd --help` for details
-OPTIONS="--loadavg-target 8"
+OPTIONS="--loadavg-target 4"
 
 ## Bees DB size
 # Hash Table Sizing
