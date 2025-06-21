@@ -133,7 +133,6 @@ systemctl enable podman.socket
 systemctl enable tailscaled.service
 systemctl enable opensnitch.service
 systemctl enable tlp.service
-systemctl enable beesd@1fa8bc05-0ffc-425b-b4d9-a8f15b3d492d.service
 systemctl enable ydotool.service
 
 systemctl mask systemd-rfkill.service systemd-rfkill.socket
