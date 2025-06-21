@@ -18,6 +18,7 @@ curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/op
 dnf5 remove --assumeyes tuned tuned-ppd
 
 dnf5 install --assumeyes \
+        duperemove \
 	/tmp/opensnitch-ui.rpm \
 	/tmp/opensnitch.rpm \
 	/tmp/packages/*.rpm \
