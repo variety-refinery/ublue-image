@@ -9,7 +9,8 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-curl --location --output /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+#curl --location --output /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+sudo dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 curl --location --output /etc/yum.repos.d/scrcpy.repo https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-41/zeno-scrcpy-fedora-41.repo
 curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-1.6.6-1.x86_64.rpm
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-ui-1.6.6-1.noarch.rpm
@@ -25,7 +26,6 @@ dnf5 install --assumeyes \
 	alsa-lib-devel \
 	argon2 \
 	bat \
-	bees \
 	borgbackup \
 	chafa \
 	clang \
@@ -118,43 +118,6 @@ EOF
 
 cat << EOF > /etc/sysctl.d/99-sysrq.conf
 kernel.sysrq = 244
-EOF
-
-cat << EOF > /etc/bees/beesd.conf
-## Config for Bees: /etc/bees/beesd.conf.sample
-## https://github.com/Zygo/bees
-## It's a default values, change it, if needed
-
-# How to use?
-# Copy this file to a new file name and adjust the UUID below
-
-# Which FS will be used
-UUID=1fa8bc05-0ffc-425b-b4d9-a8f15b3d492d
-
-## System Vars
-# Change carefully
-# WORK_DIR=/run/bees/
-# MNT_DIR="\$WORK_DIR/mnt/\$UUID"
-# BEESHOME="\$MNT_DIR/.beeshome"
-# BEESSTATUS="\$WORK_DIR/\$UUID.status"
-
-## Options to apply, see `beesd --help` for details
-OPTIONS="--loadavg-target 4"
-
-## Bees DB size
-# Hash Table Sizing
-# sHash table entries are 16 bytes each
-# (64-bit hash, 52-bit block number, and some metadata bits)
-# Each entry represents a minimum of 4K on disk.
-# unique data size    hash table size    average dedupe block size
-#     1TB                 4GB                  4K
-#     1TB                 1GB                 16K
-#     1TB               256MB                 64K
-#     1TB                16MB               1024K
-#    64TB                 1GB               1024K
-#
-# Size MUST be multiple of 128KB
-# DB_SIZE=\$((1024*1024*1024)) # 1G in bytes
 EOF
 
 # Use a COPR Example:
