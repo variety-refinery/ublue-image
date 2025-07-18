@@ -99,7 +99,7 @@ dnf5 install --assumeyes \
 	sqlitebrowser \
 	tailscale \
 	tealdeer \
-	tessearct-devel \
+	tesseract-devel \
 	tesseract \
 	tesseract-langpack-eng \
 	tesseract-libs \
