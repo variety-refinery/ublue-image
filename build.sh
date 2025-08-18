@@ -18,10 +18,10 @@ curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/op
 dnf5 remove --assumeyes tuned tuned-ppd firefox
 
 dnf5 install --assumeyes \
-        duperemove \
 	/tmp/opensnitch-ui.rpm \
 	/tmp/opensnitch.rpm \
 	/tmp/packages/*.rpm \
+	SDL2-devel \
 	adw-gtk3-theme \
 	akregator \
 	alsa-lib-devel \
@@ -40,6 +40,7 @@ dnf5 install --assumeyes \
 	fd-find \
 	fish \
 	flatpak-builder \
+	g++ \
 	graphviz \
 	gstreamer1-devel \
 	gstreamer1-plugins-bad-free \
@@ -56,12 +57,11 @@ dnf5 install --assumeyes \
 	kcolorchooser \
 	khal \
 	kleopatra \
-	akmod-v4l2loopback \
-	kmod-v4l2loopback \
 	krita \
 	libavif-tools \
 	libcurl-devel \
 	libgit2-devel \
+	libpng-devel \
 	libssh2-devel \
 	mesa-demos \
 	mpd \
@@ -99,18 +99,20 @@ dnf5 install --assumeyes \
 	sqlitebrowser \
 	tailscale \
 	tealdeer \
-	tesseract-devel \
 	tesseract \
+	tesseract-devel \
 	tesseract-langpack-eng \
 	tesseract-libs \
 	tlp \
 	tlp-rdw \
 	tmux \
 	trash-cli \
+	v4l2loopback \
 	vdirsyncer \
 	xdotool \
 	ydotool \
 	yq \
+        duperemove \
 	yt-dlp
 
 cat << EOF > /etc/modprobe.d/v4l2loopback.conf
