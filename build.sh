@@ -27,6 +27,7 @@ dnf5 install --assumeyes \
 	alsa-lib-devel \
 	argon2 \
 	bat \
+	binaryen \
 	borgbackup \
 	chafa \
 	clang \
@@ -109,6 +110,7 @@ dnf5 install --assumeyes \
 	trash-cli \
 	v4l2loopback \
 	vdirsyncer \
+	wabt \
 	xdotool \
 	ydotool \
 	yq \
