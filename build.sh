@@ -17,9 +17,6 @@ curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/op
 
 dnf5 remove --assumeyes tuned tuned-ppd firefox
 
-rpm --import /tmp/zoom/key.pub
-curl --location --output /tmp/packages/zoom.rpm https://cdn.zoom.us/prod/6.6.0.4410/zoom_x86_64.rpm
-
 dnf5 install --assumeyes \
 	/tmp/opensnitch-ui.rpm \
 	/tmp/opensnitch.rpm \

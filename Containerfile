@@ -22,7 +22,6 @@ RUN mkdir -p /var/lib/alternatives && \
 
 COPY build.sh /tmp/build.sh
 ADD packages /tmp/packages
-ADD zoom /tmp/zoom
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
