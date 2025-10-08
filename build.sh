@@ -14,7 +14,6 @@ sudo dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stabl
 curl --location --output /etc/yum.repos.d/scrcpy.repo https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-42/zeno-scrcpy-fedora-42.repo
 curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.7.2/opensnitch-1.7.2-1.x86_64.rpm
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.7.2/opensnitch-ui-1.7.2-1.noarch.rpm
-curl --location --output /tmp/vmware-horizon.rpm https://download3.omnissa.com/software/CART26FQ2_LIN64_RPMPKG_2506/Omnissa-Horizon-Client-2506-8.16.0-16536624989.x64.rpm
 
 dnf5 remove --assumeyes tuned tuned-ppd firefox
 
@@ -22,7 +21,6 @@ dnf5 install --assumeyes \
 	/tmp/opensnitch-ui.rpm \
 	/tmp/opensnitch.rpm \
 	/tmp/packages/*.rpm \
-	/tmp/vmware-horizon.rpm \
 	SDL2-devel \
 	adw-gtk3-theme \
 	akregator \
