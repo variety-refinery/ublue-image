@@ -34,6 +34,7 @@ dnf5 install --assumeyes \
 	cmake \
 	comrak \
 	cryfs \
+	distrobox \
 	dotnet-runtime-9.0 \
 	dotnet-sdk-9.0 \
 	easyeffects \
