@@ -32,7 +32,6 @@ dnf5 install --assumeyes \
 	chafa \
 	clang \
 	cmake \
-	comrak \
 	cryfs \
 	distrobox \
 	dotnet-runtime-9.0 \
