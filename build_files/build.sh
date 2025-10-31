@@ -110,8 +110,6 @@ dnf5 install --assumeyes \
 	tlp-rdw \
 	tmux \
 	trash-cli \
-	v4l2loopback \
-	vdirsyncer \
 	wabt \
 	xdotool \
 	ydotool \
