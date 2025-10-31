@@ -18,118 +18,121 @@ curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/op
 # remove unused packages
 dnf5 remove --assumeyes tuned tuned-ppd firefox
 
+# HACK: for some reason opensnitch tries to enable itself after installing it,
+# but systemd in unavailable in a container, so we need to skip its scripts
+dnf5 install --assumeyes --setopt=tsflags=noscripts \
+  	/tmp/opensnitch.rpm
+
 # packages
-dnf5 install --assumeyes tmux rustup
-#dnf5 install --assumeyes \
-#	/ctx/*.rpm \
-#	/tmp/opensnitch.rpm \
-#	/tmp/opensnitch-ui.rpm \
-#	SDL2-devel \
-#	adw-gtk3-theme \
-#	akregator \
-#	alsa-lib-devel \
-#	argon2 \
-#	bat \
-#	binaryen \
-#	borgbackup \
-#	chafa \
-#	clang \
-#	cmake \
-#	cryfs \
-#	distrobox \
-#	dotnet-runtime-9.0 \
-#	dotnet-sdk-9.0 \
-#	easyeffects \
-#	fastfetch \
-#	fd-find \
-#	fish \
-#	flatpak-builder \
-#	g++ \
-#	graphviz \
-#	gstreamer1-devel \
-#	gstreamer1-plugins-bad-free \
-#	gstreamer1-plugins-bad-free-devel \
-#	gstreamer1-plugins-bad-free-extras \
-#	gstreamer1-plugins-base-devel \
-#	gstreamer1-plugins-base-tools \
-#	gstreamer1-plugins-good \
-#	gstreamer1-plugins-good-extras \
-#	gstreamer1-plugins-ugly \
-#	gtk3-devel \
-#	hyfetch \
-#	inxi \
-#	kcolorchooser \
-#	khal \
-#	kleopatra \
-#	krita \
-#	libavif-tools \
-#	libcurl-devel \
-#	libgit2-devel \
-#	libpng-devel \
-#	libssh2-devel \
-#	mesa-demos \
-#	mpd \
-#	mpdris2 \
-#	mpv \
-#	ncmpcpp \
-#	neovim \
-#	ninja-build \
-#	nmap \
-#	nmap-ncat \
-#	openssl-devel \
-#	oxipng \
-#	p7zip \
-#	php \
-#	php-pgsql \
-#	pkgconf \
-#	plasma-sdk \
-#	pnpm \
-#	postgresql \
-#	postgresql-contrib \
-#	postgresql-server \
-#	powertop \
-#	qalculate \
-#	qalculate-gtk \
-#	qt6-qdbusviewer \
-#	rclone \
-#	rpm-build \
-#	rpm-devel \
-#	rpmdevtools \
-#	rpmlint \
-#	rustup \
-#	scrcpy \
-#	skanpage \
-#	speech-dispatcher \
-#	sqlitebrowser \
-#	tailscale \
-#	tealdeer \
-#	tesseract \
-#	tesseract-devel \
-#	tesseract-langpack-eng \
-#	tesseract-libs \
-#	tlp \
-#	tlp-rdw \
-#	tmux \
-#	trash-cli \
-#	wabt \
-#	xdotool \
-#	ydotool \
-#	yq \
-#	duperemove \
-#	yt-dlp
+dnf5 install --assumeyes \
+	/ctx/*.rpm \
+	/tmp/opensnitch-ui.rpm \
+	SDL2-devel \
+	adw-gtk3-theme \
+	akregator \
+	alsa-lib-devel \
+	argon2 \
+	bat \
+	binaryen \
+	borgbackup \
+	chafa \
+	clang \
+	cmake \
+	cryfs \
+	distrobox \
+	dotnet-runtime-9.0 \
+	dotnet-sdk-9.0 \
+	easyeffects \
+	fastfetch \
+	fd-find \
+	fish \
+	flatpak-builder \
+	g++ \
+	graphviz \
+	gstreamer1-devel \
+	gstreamer1-plugins-bad-free \
+	gstreamer1-plugins-bad-free-devel \
+	gstreamer1-plugins-bad-free-extras \
+	gstreamer1-plugins-base-devel \
+	gstreamer1-plugins-base-tools \
+	gstreamer1-plugins-good \
+	gstreamer1-plugins-good-extras \
+	gstreamer1-plugins-ugly \
+	gtk3-devel \
+	hyfetch \
+	inxi \
+	kcolorchooser \
+	khal \
+	kleopatra \
+	krita \
+	libavif-tools \
+	libcurl-devel \
+	libgit2-devel \
+	libpng-devel \
+	libssh2-devel \
+	mesa-demos \
+	mpd \
+	mpdris2 \
+	mpv \
+	ncmpcpp \
+	neovim \
+	ninja-build \
+	nmap \
+	nmap-ncat \
+	openssl-devel \
+	oxipng \
+	p7zip \
+	php \
+	php-pgsql \
+	pkgconf \
+	plasma-sdk \
+	pnpm \
+	postgresql \
+	postgresql-contrib \
+	postgresql-server \
+	powertop \
+	qalculate \
+	qalculate-gtk \
+	qt6-qdbusviewer \
+	rclone \
+	rpm-build \
+	rpm-devel \
+	rpmdevtools \
+	rpmlint \
+	rustup \
+	scrcpy \
+	skanpage \
+	speech-dispatcher \
+	sqlitebrowser \
+	tailscale \
+	tealdeer \
+	tesseract \
+	tesseract-devel \
+	tesseract-langpack-eng \
+	tesseract-libs \
+	tlp \
+	tlp-rdw \
+	tmux \
+	trash-cli \
+	wabt \
+	xdotool \
+	ydotool \
+	yq \
+	duperemove \
+	yt-dlp
 
 # tweaks
-#cat << EOF > /etc/modprobe.d/v4l2loopback.conf
-#options v4l2loopback video_nr=8 exclusive_caps=1
-#EOF
-#
-#cat << EOF > /etc/tlp.d/00-autosuspend.conf
-#USB_DENYLIST="04e8:6860"
-#EOF
-#
-#cat << EOF > /etc/sysctl.d/99-sysrq.conf
-#kernel.sysrq = 244
-#EOF
+cat << EOF > /etc/modprobe.d/v4l2loopback.conf
+options v4l2loopback video_nr=8 exclusive_caps=1
+EOF
+
+cat << EOF > /etc/tlp.d/00-autosuspend.conf
+USB_DENYLIST="04e8:6860"
+EOF
+
+cat << EOF > /etc/sysctl.d/99-sysrq.conf
+kernel.sysrq = 244
+EOF
 
 
 # Use a COPR Example:
@@ -142,9 +145,9 @@ dnf5 install --assumeyes tmux rustup
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-#systemctl enable tailscaled.service
-#systemctl enable opensnitch.service
-#systemctl enable tlp.service
-#systemctl enable ydotool.service
+systemctl enable tailscaled.service
+systemctl enable opensnitch.service
+systemctl enable tlp.service
+systemctl enable ydotool.service
 
-#systemctl mask systemd-rfkill.service systemd-rfkill.socket
+systemctl mask systemd-rfkill.service systemd-rfkill.socket
