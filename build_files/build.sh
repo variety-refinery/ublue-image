@@ -47,7 +47,10 @@ dnf5 install --assumeyes \
 	fd-find \
 	fish \
 	flatpak-builder \
+	fuse3 \
+	fuse3-devel \
 	g++ \
+	git-delta \
 	graphviz \
 	gstreamer1-devel \
 	gstreamer1-plugins-bad-free \
