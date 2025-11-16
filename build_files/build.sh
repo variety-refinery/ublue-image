@@ -46,6 +46,7 @@ dnf5 install --assumeyes \
 	fastfetch \
 	fd-find \
 	fish \
+	flac \
 	flatpak-builder \
 	fuse3 \
 	fuse3-devel \
