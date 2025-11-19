@@ -66,7 +66,6 @@ dnf5 install --assumeyes \
 	hyfetch \
 	inxi \
 	kcolorchooser \
-	khal \
 	kleopatra \
 	krita \
 	libavif-tools \
@@ -95,6 +94,7 @@ dnf5 install --assumeyes \
 	postgresql-contrib \
 	postgresql-server \
 	powertop \
+	python3-pyqt6 \
 	qalculate \
 	qalculate-gtk \
 	qt6-qdbusviewer \
