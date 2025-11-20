@@ -119,6 +119,8 @@ dnf5 install --assumeyes \
 	tmux \
 	trash-cli \
 	wabt \
+	wine \
+	winetricks \
 	xdotool \
 	ydotool \
 	yq \
