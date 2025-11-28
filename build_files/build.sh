@@ -27,6 +27,7 @@ dnf5 install --assumeyes --setopt=tsflags=noscripts \
 dnf5 install --assumeyes \
 	/ctx/*.rpm \
 	/tmp/opensnitch-ui.rpm \
+	@virtualization \
 	SDL2-devel \
 	adw-gtk3-theme \
 	akregator \
@@ -42,6 +43,7 @@ dnf5 install --assumeyes \
 	distrobox \
 	dotnet-runtime-9.0 \
 	dotnet-sdk-9.0 \
+	duperemove \
 	easyeffects \
 	fastfetch \
 	fd-find \
@@ -124,7 +126,6 @@ dnf5 install --assumeyes \
 	xdotool \
 	ydotool \
 	yq \
-	duperemove \
 	yt-dlp
 
 # tweaks
