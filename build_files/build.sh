@@ -42,6 +42,7 @@ dnf5 install --assumeyes \
 	distrobox \
 	dotnet-runtime-9.0 \
 	dotnet-sdk-9.0 \
+	duperemove \
 	easyeffects \
 	fastfetch \
 	fd-find \
@@ -73,6 +74,7 @@ dnf5 install --assumeyes \
 	libgit2-devel \
 	libpng-devel \
 	libssh2-devel \
+	libvirt \
 	mesa-demos \
 	mpd \
 	mpdris2 \
@@ -97,6 +99,7 @@ dnf5 install --assumeyes \
 	python3-pyqt6 \
 	qalculate \
 	qalculate-gtk \
+	qemu \
 	qt6-qdbusviewer \
 	rclone \
 	rpm-build \
@@ -118,13 +121,13 @@ dnf5 install --assumeyes \
 	tlp-rdw \
 	tmux \
 	trash-cli \
+	virt-manager \
 	wabt \
 	wine \
 	winetricks \
 	xdotool \
 	ydotool \
 	yq \
-	duperemove \
 	yt-dlp
 
 # tweaks
