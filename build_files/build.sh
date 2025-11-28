@@ -27,7 +27,6 @@ dnf5 install --assumeyes --setopt=tsflags=noscripts \
 dnf5 install --assumeyes \
 	/ctx/*.rpm \
 	/tmp/opensnitch-ui.rpm \
-	@virtualization \
 	SDL2-devel \
 	adw-gtk3-theme \
 	akregator \
