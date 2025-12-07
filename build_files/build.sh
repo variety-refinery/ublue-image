@@ -98,6 +98,7 @@ dnf5 install --assumeyes \
 	python3-pyqt6 \
 	qalculate \
 	qalculate-gtk \
+	qpdf \
 	qt6-qdbusviewer \
 	rclone \
 	rpm-build \
