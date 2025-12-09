@@ -29,7 +29,6 @@ dnf5 install --assumeyes \
 	/tmp/opensnitch-ui.rpm \
 	SDL2-devel \
 	adw-gtk3-theme \
-	akregator \
 	alsa-lib-devel \
 	argon2 \
 	bat \
