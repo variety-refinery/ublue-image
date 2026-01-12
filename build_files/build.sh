@@ -74,6 +74,7 @@ dnf5 install --assumeyes \
 	libpng-devel \
 	libssh2-devel \
 	mesa-demos \
+	mosquitto \
 	mpd \
 	mpdris2 \
 	mpv \
