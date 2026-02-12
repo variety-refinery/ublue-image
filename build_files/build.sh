@@ -31,6 +31,7 @@ dnf5 install --assumeyes \
 	adw-gtk3-theme \
 	alsa-lib-devel \
 	argon2 \
+	asciinema \
 	bat \
 	binaryen \
 	borgbackup \
