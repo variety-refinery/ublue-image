@@ -109,6 +109,7 @@ dnf5 install --assumeyes \
 	rpmlint \
 	rustup \
 	scrcpy \
+	screen \
 	skanpage \
 	speech-dispatcher \
 	sqlitebrowser \
