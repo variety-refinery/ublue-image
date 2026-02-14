@@ -23,7 +23,7 @@ dnf5 remove --assumeyes tuned tuned-ppd firefox
 dnf5 install --assumeyes --setopt=tsflags=noscripts \
   	/tmp/opensnitch.rpm
 
-cp /ctc/69-probe-rs.rules /etc/udev/rules.d
+cp /ctx/69-probe-rs.rules /etc/udev/rules.d
 groupadd --system plugdev
 
 # packages
