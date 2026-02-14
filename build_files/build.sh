@@ -24,7 +24,6 @@ dnf5 install --assumeyes --setopt=tsflags=noscripts \
   	/tmp/opensnitch.rpm
 
 cp /ctx/69-probe-rs.rules /etc/udev/rules.d
-groupadd --system plugdev
 
 # packages
 dnf5 install --assumeyes \
