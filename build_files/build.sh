@@ -24,6 +24,7 @@ dnf5 install --assumeyes --setopt=tsflags=noscripts \
   	/tmp/opensnitch.rpm
 
 cp /ctx/69-probe-rs.rules /etc/udev/rules.d
+cp /ctx/99-disable-framework-keyboard.rules /etc/udev/rules.d
 
 # packages
 dnf5 install --assumeyes \
