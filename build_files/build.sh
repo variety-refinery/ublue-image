@@ -31,7 +31,7 @@ cp /ctx/99-disable-framework-keyboard.rules /etc/udev/rules.d
 # packages
 dnf5 install --assumeyes \
 	/ctx/*.rpm \
-	/tmp/opensnitch-ui.rpm \
+	/tmp/*.rpm \
 	SDL2-devel \
 	adw-gtk3-theme \
 	alsa-lib-devel \
