@@ -14,7 +14,6 @@ sudo dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stabl
 curl --location --output /etc/yum.repos.d/scrcpy.repo "https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-$(rpm -E %fedora)/zeno-scrcpy-fedora-$(rpm -E %fedora).repo"
 curl --location --output /tmp/opensnitch.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.8.0/opensnitch-1.8.0-1.x86_64.rpm
 curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.8.0/opensnitch-ui-1.8.0-1.noarch.rpm
-curl --location --output /tmp/opensnitch-ui.rpm https://github.com/evilsocket/opensnitch/releases/download/v1.8.0/opensnitch-ui-1.8.0-1.noarch.rpm
 curl --location --output /tmp/otd.rpm https://github.com/OpenTabletDriver/OpenTabletDriver/releases/download/v0.6.6.2/opentabletdriver-0.6.6.2-1.x86_64.rpm
 
 # remove unused packages
@@ -22,8 +21,11 @@ dnf5 remove --assumeyes tuned tuned-ppd firefox
 
 # HACK: for some reason opensnitch tries to enable itself after installing it,
 # but systemd in unavailable in a container, so we need to skip its scripts
+# HACK: apparently opentabletdriver tries unload and load modules, which is not
+# possible in this environment
 dnf5 install --assumeyes --setopt=tsflags=noscripts \
-  	/tmp/opensnitch.rpm
+  	/tmp/opensnitch.rpm \
+	/tmp/otd.rpm
 
 cp /ctx/69-probe-rs.rules /etc/udev/rules.d
 cp /ctx/99-disable-framework-keyboard.rules /etc/udev/rules.d
@@ -31,7 +33,7 @@ cp /ctx/99-disable-framework-keyboard.rules /etc/udev/rules.d
 # packages
 dnf5 install --assumeyes \
 	/ctx/*.rpm \
-	/tmp/*.rpm \
+	/tmp/opensnitch-ui.rpm \
 	SDL2-devel \
 	adw-gtk3-theme \
 	alsa-lib-devel \
