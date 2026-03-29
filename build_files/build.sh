@@ -94,6 +94,7 @@ dnf5 install --assumeyes \
 	openssl-devel \
 	oxipng \
 	p7zip \
+	pandoc \
 	php \
 	php-pgsql \
 	pkgconf \
