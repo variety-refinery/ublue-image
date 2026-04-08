@@ -49,6 +49,7 @@ dnf5 install --assumeyes \
 	distrobox \
 	dotnet-runtime-9.0 \
 	dotnet-sdk-9.0 \
+	du-dust \
 	duperemove \
 	easyeffects \
 	fastfetch \
