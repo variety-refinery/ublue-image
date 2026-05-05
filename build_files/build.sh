@@ -29,6 +29,7 @@ dnf5 install --assumeyes --setopt=tsflags=noscripts \
 
 cp /ctx/69-probe-rs.rules /etc/udev/rules.d
 cp /ctx/99-disable-framework-keyboard.rules /etc/udev/rules.d
+cp /ctx/71-8bitdo.rules /etc/udev/rules.d
 
 # packages
 dnf5 install --assumeyes \
