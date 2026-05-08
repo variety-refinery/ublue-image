@@ -1,5 +1,5 @@
 export image_name := env("IMAGE_NAME", "kinoite-main") # output image name, usually same as repo name, change as needed
-export default_tag := env("DEFAULT_TAG", "43")
+export default_tag := env("DEFAULT_TAG", "44")
 export bib_image := env("BIB_IMAGE", "quay.io/centos-bootc/bootc-image-builder:latest")
 
 alias build-vm := build-qcow2
