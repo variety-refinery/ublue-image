@@ -169,5 +169,6 @@ systemctl enable tailscaled.service
 systemctl enable opensnitch.service
 systemctl enable tlp.service
 systemctl enable ydotool.service
+systemctl enable tlp-pd.service
 
 systemctl mask systemd-rfkill.service systemd-rfkill.socket
