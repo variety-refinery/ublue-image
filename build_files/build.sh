@@ -123,6 +123,7 @@ dnf5 install --assumeyes \
 	skanpage \
 	speech-dispatcher \
 	sqlitebrowser \
+	steam \
 	tailscale \
 	tealdeer \
 	tesseract \
