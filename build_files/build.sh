@@ -41,6 +41,7 @@ dnf5 install --assumeyes \
 	bat \
 	binaryen \
 	borgbackup \
+	btop \
 	chafa \
 	clang \
 	cmake \
@@ -51,6 +52,7 @@ dnf5 install --assumeyes \
 	du-dust \
 	duperemove \
 	easyeffects \
+	espanso-wayland \
 	fastfetch \
 	fd-find \
 	fish \
