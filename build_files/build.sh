@@ -134,6 +134,7 @@ dnf5 install --assumeyes \
 	tlp-rdw \
 	tmux \
 	trash-cli \
+	unifont-fonts \
 	wabt \
 	wine \
 	winetricks \
