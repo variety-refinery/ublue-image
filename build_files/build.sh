@@ -30,7 +30,7 @@ dnf5 install --assumeyes --setopt=tsflags=noscripts \
 cp /ctx/*.rules /etc/udev/rules.d
 
 # packages
-dnf5 install --assumeyes \
+dnf5 install --assumeyes --skip-unavailable \
 	/ctx/*.rpm \
 	/tmp/opensnitch-ui.rpm \
 	SDL2-devel \
