@@ -53,6 +53,7 @@ dnf5 install --assumeyes --skip-unavailable \
 	duperemove \
 	easyeffects \
 	espanso-wayland \
+	eza \
 	fastfetch \
 	fd-find \
 	fish \
