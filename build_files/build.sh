@@ -36,6 +36,7 @@ dnf5 install --assumeyes --skip-unavailable \
 	SDL2-devel \
 	adw-gtk3-theme \
 	alsa-lib-devel \
+	arduino-language-server \
 	argon2 \
 	asciinema \
 	bat \
