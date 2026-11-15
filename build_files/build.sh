@@ -158,6 +158,10 @@ cat << EOF > /etc/sysctl.d/99-sysrq.conf
 kernel.sysrq = 244
 EOF
 
+cat << EOF > /etc/sysctl.d/99-huge-pages.conf
+vm.nr_hugepages=3072
+EOF
+
 
 # Use a COPR Example:
 #
