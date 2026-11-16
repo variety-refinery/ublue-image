@@ -60,6 +60,7 @@ dnf5 install --assumeyes --skip-unavailable \
 	fish \
 	flac \
 	flatpak-builder \
+	framework-system \
 	fuse3 \
 	fuse3-devel \
 	g++ \
