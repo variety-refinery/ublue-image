@@ -34,6 +34,7 @@ dnf5 install --assumeyes --skip-unavailable \
 	/ctx/*.rpm \
 	/tmp/opensnitch-ui.rpm \
 	SDL2-devel \
+	SDL3-devel \
 	adw-gtk3-theme \
 	alsa-lib-devel \
 	arduino-language-server \
